@@ -1,0 +1,48 @@
+<!doctype html>
+<head id="www-sitename-com" data-template-set="html5-reset">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="title" content="{{ page.title }}">
+  <meta name="description" content="">
+  <meta name="author" content="ninjinkun">
+  <meta name="Copyright" content="Copyright ninjinkun 2012. All Rights Reserved.">
+  <meta name="DC.title" content="Feedback">
+  <meta name="DC.subject" content="Feedback is ...">
+  <meta name="DC.creator" content="ninjinkun">
+  <!--link rel="shortcut icon" href="/img/favicon.ico"-->
+  <!--link rel="apple-touch-icon" href="/img/apple-touch-icon.png"-->
+  <link rel="stylesheet" href="/css/feedback.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var target = 1;
+      var length = $('#display img').length;
+      if(length > 1){
+        $('#display img:nth-child('+target+')').addClass('show');
+        setInterval(function(){
+          if(target == length){target = 1;}else{target++;}
+          $('#display img').removeClass('show');
+          $('#display img:nth-child('+target+')').addClass('show');
+        },5000);
+      }
+    });
+  </script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</head>
+<body>
+<div id="container">
+  <div id="content">
+    <img src="/img/logo.png" height="74" width="367" id="logo">
+    {{ content }}
+    <p id="copyright">Copyright &copy; 2012 ninjinkun</p>
+  </div>
+  <div id="display">
+    <img src="/img/screenshot1.png" width="" height="" />
+    <img src="/img/screenshot2.png" width="" height="" />
+    <img src="/img/screenshot1.png" width="" height="" />
+    <img src="/img/screenshot2.png" width="" height="" />
+  </div>
+</div>
+</body>
+</html>

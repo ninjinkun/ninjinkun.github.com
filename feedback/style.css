@@ -151,14 +151,18 @@ em, i {
   font-weight: bold;
 }
 /* ------------------------------------- */
-
+#language {
+  padding:5px 10px;
+  text-align: right;
+  font-size:90%;
+}
 #container {
   position:absolute;
   top:50%;
   left:50%;
   width:720px;
-  height:600px;
-  margin-top:-300px;
+  height:640px;
+  margin-top:-320px;
   margin-left:-360px;
   text-shadow:0 -2px 0 rgba(0,0,0,0.3);
 }
@@ -167,12 +171,12 @@ em, i {
   width:370px;
 }
 #container #content p {
-  margin:25px 5px;
+  margin:15px 5px 20px;
 }
 #logo {
   margin-top:5px;
 }
-#service {
+.service {
   overflow: hidden;
   padding:20px 20px 15px;
   border-top:2px solid #021f37;
@@ -180,30 +184,32 @@ em, i {
   font-weight:bold;
   box-shadow:inset 0 1px 0 rgba(255,255,255,0.15), 0 1px 0 rgba(255,255,255,0.15);
 }
-#service li {
+.service li {
   float:left;
   width:165px;
 }
-#service li:before {
+.service li:before {
   content:'+';
   margin-right:5px;
+}
+#japanese:target + #english,
+#japanese {
+  display:none;
+}
+#japanese:target {
+  display:block;
 }
 #to-store {
   display:block;
   width:200px;
   margin:40px auto 20px;
 }
-#copyright {
-  font-size:80%;
-  color:#ccc;
-  text-align: center;
-}
 #display {
   position:absolute;
   left:420px;
   width:294px;
   height:592px;
-  background:url(img/iphone.png)no-repeat 0 0;
+  background:url(img/iphone@2x.png) 0 0 / 294px 592px no-repeat;
 }
 #display img {
   position:absolute;
@@ -225,9 +231,24 @@ em, i {
   position:absolute;
   top:16px;
   left:127px;
-  content:url(img/glare.png);
+  content:'';
+  width:149px;
+  height:335px;
+  background:url(img/glare@2x.png) 0 0 / 149px 335px no-repeat;
 }
-
+#footer {
+  position: absolute;
+  top:600px;
+  width:700px;
+}
+#social-buttons {
+  float:left;
+}
+#copyright {
+  font-size:80%;
+  color:#ccc;
+  text-align: right;
+}
 
 
 

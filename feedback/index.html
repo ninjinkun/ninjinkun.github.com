@@ -1,49 +1,91 @@
----
-layout: feedback
-title: Feedback - Visualize your blog's impact
----
-<div id="content">
-<img src="/img/logo@2x.png" height="74" width="367" id="logo" alt="Feedback">
-<p>Are you interested in the feedback your blog or website receives? Now you can check for references to your blog or website made on Twitter, Facebook, and Google+.<br />Feedback is an app that summarizes mentions of your blog in social media and lets you analyze your impact.
-<p>Feedback currently handles the following social media services</p>
-<ul class="service">
-  <li>Twitter</li>
-  <li>Facebook</li>
-  <li>Google +1</li>
-  <li>Reddit</li>
-   <li>Tumblr</li>
-</ul>
-
-<a href="https://itunes.apple.com/us/app/feedback-visualize-your-blogs/id577698758?l=en&ls=1&mt=8" id="to-store"><img src="/img/App_Store_Badge.svg" width="200px"></a>
+<!doctype html>
+<head id="www-sitename-com" data-template-set="html5-reset">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta name="author" content="ninjinkun">
+  <meta name="Copyright" content="Copyright ninjinkun 2012. All Rights Reserved.">
+  <meta name="DC.title" content="Feedback">
+  <meta name="DC.subject" content="Feedback is ...">
+  <meta name="DC.creator" content="ninjinkun">
+  <!--link rel="shortcut icon" href="_/img/favicon.ico"-->
+  <!--link rel="apple-touch-icon" href="_/img/apple-touch-icon.png"-->
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var target = 1;
+      var length = $('#display img').length;
+      if(length > 1){
+        $('#display img:nth-child('+target+')').addClass('show');
+        setInterval(function(){
+          if(target == length){target = 1;}else{target++;}
+          $('#display img').removeClass('show');
+          $('#display img:nth-child('+target+')').addClass('show');
+        },5000);
+      }
+      $('#japanese-label').click(showJapanese);
+      $('#english-label').click(showEnglish);
+      if (navigator.language === 'ja') {
+        showJapanese();
+      }
+    });
+    function showJapanese() {
+      $('#japanese').show();
+      $('#english').hide();
+    }
+    function showEnglish() {
+      $('#japanese').hide();
+      $('#english').show();
+    }
+  </script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</head>
+<body>
+<div id="language"><a id="english-label">English</a> / <a id="japanese-label">日本語</a></div>
+<div id="container">
+  <div id="content">
+    <img src="img/logo@2x.png" height="74" width="367" id="logo">
+    <div id="japanese">
+      <p>自分のブログのTwitterやFacebook、はてなブックマークの数が気になっていませんか？<br />Feedbackはブログに付いているソーシャルボタンの数を集計し、反響を分析できるアプリです。</p>
+      <p>ソーシャルボタンは以下のものに対応しています。</p>
+      <ul class="service">
+        <li>Twitter</li>
+        <li>Tumblr</li>
+        <li>Facebook</li>
+        <li>はてなブックマーク</li>
+        <li>Google +1</li>
+        <li>はてなスター</li>
+        <li>Reddit</li>
+      </ul>
+    </div>
+    <div id="english">
+      <p>Are you interested in the feedback your blog or website receives? Now you can check for references to your blog or website made on Twitter, Facebook, and Google+.<br />Feedback is an app that summarizes mentions of your blog in social media and lets you analyze your impact.</p>
+      <p>Feedback currently handles the following social media services</p>
+      <ul class="service">
+        <li>Twitter</li>
+        <li>Facebook</li>
+        <li>Google +1</li>
+        <li>Reddit</li>
+        <li>Tumblr</li>
+      </ul>
+    </div>
+    <a href="#" id="to-store"><img src="img/App_Store_Badge.svg" width="200px"></a>
+  </div>
+  <div id="display">
+    <img src="img/screenshot1.png" width="" height="" />
+    <img src="img/screenshot2.png" width="" height="" />
+    <img src="img/screenshot1.png" width="" height="" />
+    <img src="img/screenshot2.png" width="" height="" />
+  </div>
+  <div id="footer">
+    <div id="social-buttons">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="feedbackapp">Tweet</a>
+    </div>
+    <p id="copyright">Copyright &copy; 2012 ninjinkun</p>
+  </div>
 </div>
-<div id="display">
-  <img src="/img/screenshot1.png" width="" height="" alt="" />
-  <img src="/img/screenshot2.png" width="" height="" alt="" />
-  <img src="/img/screenshot1.png" width="" height="" alt="" />
-  <img src="/img/screenshot2.png" width="" height="" alt="" />
-</div>
-<div id="footer">
-  <div id="social-buttons">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="feedbackapp">Tweet</a>
-    <div class="fb-like" data-href="http://ninjinkun.github.com/feedback/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=385481141526705";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-  </div>  
-    <!-- Place this tag where you want the +1 button to render. -->
-    <div class="g-plusone"></div>
-    <!-- Place this tag after the last +1 button tag. -->
-    <script type="text/javascript">
-    (function() {
-      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-      po.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-    </script>
-  <p id="copyright">Copyright &copy; 2012 ninjinkun</p>
-</div>
+</body>
+</html>

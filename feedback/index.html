@@ -2,13 +2,13 @@
 <head id="www-sitename-com" data-template-set="html5-reset">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title></title>
-  <meta name="title" content="">
+  <title>Feedback iPhone App - Visualize your blog's impact</title>
+  <meta name="title" content="Feedback iPhone App - Visualize your blog's impact">
   <meta name="description" content="">
   <meta name="author" content="ninjinkun">
   <meta name="Copyright" content="Copyright ninjinkun 2012. All Rights Reserved.">
-  <meta name="DC.title" content="Feedback">
-  <meta name="DC.subject" content="Feedback is ...">
+  <meta name="DC.title" content="Feedback iPhone App">
+  <meta name="DC.subject" content="Feedback - Visualize your blog's impact">
   <meta name="DC.creator" content="ninjinkun">
   <!--link rel="shortcut icon" href="_/img/favicon.ico"-->
   <!--link rel="apple-touch-icon" href="_/img/apple-touch-icon.png"-->
@@ -16,29 +16,36 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script type="text/javascript">
     $(function(){
-      var target = 1;
-      var length = $('#display img').length;
+      if (navigator.language === 'ja') {
+        showJapanese();
+      }
+      else {
+        showEnglish();
+      }
+      var target = 0;
+      var length = $('#display img:visible').length;
       if(length > 1){
-        $('#display img:nth-child('+target+')').addClass('show');
+        $('#display img:visible').eq(target).addClass('show');
         setInterval(function(){
-          if(target == length){target = 1;}else{target++;}
-          $('#display img').removeClass('show');
-          $('#display img:nth-child('+target+')').addClass('show');
+          if (target == length - 1) {
+            target = 0;
+          } else {
+            target++;
+          }
+          $('#display img:visible').removeClass('show');
+          $('#display img:visible').eq(target).addClass('show');
         },5000);
       }
       $('#japanese-label').click(showJapanese);
       $('#english-label').click(showEnglish);
-      if (navigator.language === 'ja') {
-        showJapanese();
-      }
     });
     function showJapanese() {
-      $('#japanese').show();
-      $('#english').hide();
+      $('.japanese').show();
+      $('.english').hide();
     }
     function showEnglish() {
-      $('#japanese').hide();
-      $('#english').show();
+      $('.japanese').hide();
+      $('.english').show();
     }
   </script>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -59,7 +66,7 @@
 <div id="container">
   <div id="content">
     <img src="img/logo@2x.png" height="74" width="367" id="logo">
-    <div id="japanese">
+    <div class="japanese">
       <p>自分のブログのTwitterやFacebook、はてなブックマークの数が気になっていませんか？<br />Feedbackはブログに付いているソーシャルボタンの数を集計し、反響を分析できるアプリです。</p>
       <p>ソーシャルボタンは以下のものに対応しています。</p>
       <ul class="service">
@@ -72,7 +79,7 @@
         <li>Reddit</li>
       </ul>
     </div>
-    <div id="english">
+    <div class="english">
       <p>Are you interested in the feedback your blog or website receives? Now you can check for references to your blog or website made on Twitter, Facebook, and Google+.<br />Feedback is an app that summarizes mentions of your blog in social media and lets you analyze your impact.</p>
       <p>Feedback currently handles the following social media services</p>
       <ul class="service">
@@ -86,10 +93,14 @@
     <a href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=577698758&mt=8" id="to-store"><img src="img/App_Store_Badge.svg" width="200px"></a>
   </div>
   <div id="display">
-    <img src="img/screenshot1.png" width="" height="" />
-    <img src="img/screenshot2.png" width="" height="" />
-    <img src="img/screenshot1.png" width="" height="" />
-    <img src="img/screenshot2.png" width="" height="" />
+    <img src="img/screenshot1.png" class="english" width="" height="" />
+    <img src="img/screenshot2.png" class="english" width="" height="" />
+    <img src="img/screenshot3.png" class="english" width="" height="" />
+    <img src="img/screenshot4.png" class="english" width="" height="" />
+    <img src="img/screenshot_ja1.png" class="japanese" width="" height="" />
+    <img src="img/screenshot_ja2.png" class="japanese" width="" height="" />
+    <img src="img/screenshot_ja3.png" class="japanese" width="" height="" />
+    <img src="img/screenshot_ja4.png" class="japanese" width="" height="" />    
   </div>
   <div id="footer">
     <div id="social-buttons">
@@ -116,7 +127,7 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
     })();
     </script>
-    <a href="http://b.hatena.ne.jp/entry/http://ninjinkun.github.com/feedback/" class="hatena-bookmark-button" data-hatena-bookmark-title="Feedback - ブログの評判を可視化" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    <a href="http://b.hatena.ne.jp/entry/http://ninjinkun.github.com/feedback/" class="hatena-bookmark-button" data-hatena-bookmark-title="iPhoneアプリ Feedback - ブログの評判を可視化" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
     </div>
     <p id="copyright">Copyright &copy; 2012 <a href="http://ninjinkun.hatenablog.com/">ninjinkun</p>
   </div>

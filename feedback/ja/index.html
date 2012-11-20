@@ -2,9 +2,11 @@
 layout: feedback
 title: Feedback - ブログの評判を可視化
 ---
+<div id="content">
+<img src="/img/logo@2x.png" height="74" width="367" id="logo" alt="Feedback">
 <p>自分のブログのTwitterやFacebook、はてなブックマークの数が気になっていませんか？<br />Feedbackはブログに付いているソーシャルボタンの数を集計し、反響を分析できるアプリです。</p>
 <p>ソーシャルボタンは以下のものに対応しています。</p>
-<ul id="service">
+<ul class="service">
   <li>Twitter</li>
   <li>Tumblr</li>
   <li>Facebook</li>
@@ -16,4 +18,38 @@ title: Feedback - ブログの評判を可視化
 
 <a href="https://itunes.apple.com/ja/app/feedback-visualize-your-blogs/id577698758?l=ja&mt=8" id="to-store"><img src="/img/App_Store_Badge.svg" width="200px"></a>
 
-<a href="https://twitter.com/share" class="twitter-share-button" >Tweet</a>
+</div>
+<div id="display">
+  <img src="/img/screenshot1.png" width="" height="" alt="" />
+  <img src="/img/screenshot2.png" width="" height="" alt="" />
+  <img src="/img/screenshot1.png" width="" height="" alt="" />
+  <img src="/img/screenshot2.png" width="" height="" alt="" />
+</div>
+<div id="footer">
+  <div id="social-buttons">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="feedbackapp">Tweet</a>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=285235528226255";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    </div>
+    <!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-annotation="inline" data-width="300"></div>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ja'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+  <a href="http://b.hatena.ne.jp/entry/http://ninjinkun.github.com/feedback/ja/" class="hatena-bookmark-button" data-hatena-bookmark-title="Feedback - ブログの評判を可視化" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  <p id="copyright">Copyright &copy; 2012 ninjinkun</p>
+</div>

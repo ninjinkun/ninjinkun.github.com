@@ -2,9 +2,11 @@
 layout: feedback
 title: Feedback - Visualize your blog's impact
 ---
+<div id="content">
+<img src="/img/logo@2x.png" height="74" width="367" id="logo" alt="Feedback">
 <p>Are you interested in the feedback your blog or website receives? Now you can check for references to your blog or website made on Twitter, Facebook, and Google+.<br />Feedback is an app that summarizes mentions of your blog in social media and lets you analyze your impact.
 <p>Feedback currently handles the following social media services</p>
-<ul id="service">
+<ul class="service">
   <li>Twitter</li>
   <li>Facebook</li>
   <li>Google +1</li>
@@ -13,5 +15,35 @@ title: Feedback - Visualize your blog's impact
 </ul>
 
 <a href="https://itunes.apple.com/us/app/feedback-visualize-your-blogs/id577698758?l=en&ls=1&mt=8" id="to-store"><img src="/img/App_Store_Badge.svg" width="200px"></a>
+</div>
+<div id="display">
+  <img src="/img/screenshot1.png" width="" height="" alt="" />
+  <img src="/img/screenshot2.png" width="" height="" alt="" />
+  <img src="/img/screenshot1.png" width="" height="" alt="" />
+  <img src="/img/screenshot2.png" width="" height="" alt="" />
+</div>
+<div id="footer">
+  <div id="social-buttons">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="feedbackapp">Tweet</a>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=285235528226255";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="feedbackapp">Tweet</a>
+    <!-- Place this tag where you want the +1 button to render. -->
+    <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+    <!-- Place this tag after the last +1 button tag. -->
+    <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+    </script>
+  </div>  
+  <p id="copyright">Copyright &copy; 2012 ninjinkun</p>
+</div>
